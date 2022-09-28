@@ -1,25 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
 export default function App() {
   return (
-    <ScrollView>
       <View style={styles.container0}>
         <View style={styles.container1}>
-          <View style={styles.box1} />   
-          <View style={styles.box2} />   
-          <View style={styles.box3} />
+          <View style={styles.square1} />   
+          <View style={styles.square2} />   
+          <View style={styles.square3} />
         </View>
 
         <View style={styles.container2}>
-          <View style={styles.box4} />
-          <View style={styles.box5}>
+          <View style={styles.square4} />
+          <View style={styles.square5}>
           <Text style={styles.text}>FLEXBOX</Text></View>  
-          <View style={styles.box6 } />
+          <View style={styles.square6 }/>
         </View>
-
       </View>
-    </ScrollView>
     );
 }
 
@@ -33,7 +30,7 @@ const styles = StyleSheet.create({
   container1: {
     flex: 1,
     flexWrap:'wrap',  
-    flexDirection:'column',
+    flexDirection:'row',
     backgroundColor: '#453f3f',
     
   },
@@ -41,50 +38,48 @@ const styles = StyleSheet.create({
   container2: {
     flex: 1,
     flexWrap:'wrap',
-    flexDirection:'column',
+    flexDirection:'row',
     backgroundColor: '#453f3f',
     
   },
 
-  box1: {
+  square1: {
     width: 200,
     height: 200,
     margin: 2,
-    marginTop:40,
     backgroundColor: '#a900e6',  
   },
 
-  box2: {
+  square2: {
     width: 200,
     height: 200,
     margin: 2,
     backgroundColor: '#459dff',  
   },
 
-  box3: {
+  square3: {
     width: 200,
-    height: 500,
+    height: 450,
     margin: 2,
     backgroundColor: '#7e00ff',  
   },
 
-  box4: {
-    marginTop:40,
+  square4: {
     width: 200,
     height: 200,
     margin: 2,
     backgroundColor: '#97b6ff',  
   },
   
-  box5: {
+  square5: {
     width: 200,
-    height: 500,
+    height: 450,
     margin: 2,
     backgroundColor: '#459dff',  
     justifyContent:'center',
   },
 
-  box6: {
+  square6: {
     width: 200,
     height: 200,
     margin: 2,
@@ -94,6 +89,7 @@ const styles = StyleSheet.create({
   
   text: {
     transform: [{ rotate: '-90deg'}],
+    marginVertical:170,
     fontSize:25,
     fontWeight:'bold',
     textAlign:'center',
